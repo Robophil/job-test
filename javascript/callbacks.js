@@ -18,6 +18,7 @@ const sortBooksAlphabetically = (books, callback) => {
 
 const getBooksAsync = (callback) => {
   setTimeout(() => {
+    //promise chain
     callback(books, null).then(sortedBooks => filterBooksWithTitleStartingWithA(sortedBooks, null).then(filteredBooks => print(filteredBooks)) )
   }, 2000)
   
